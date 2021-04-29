@@ -1,0 +1,23 @@
+.child {
+    width: 200px;
+    height: 200px;
+    background: red;
+    /* margin-right: 20px; */
+}
+
+/* .parent {
+    display: flex;
+    height: 1500px;
+    width: 1500px;
+    border: 2px dashed blueviolet;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+
+.buddy{
+    height: 400px;
+    /* width: 200px; */
+    border: 1px solid black;
+    
+}
