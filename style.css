@@ -1,35 +1,41 @@
 body {
     max-width: 80vw;
-    height: 6000px;
+    height: 80vw;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 7vw;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 800px) {
+    /* .item {
+        border: calc(3 / 1920 * 100vw);
+    } */
 }
 
 .box {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 3vw;
 }
 
 .item {
     width: 1vw;
     height: 1vw;
-    border: 3px solid black;
-    border-radius: 999px;
+    border: calc(3 / 1920 * 100vw) solid black;
+    border-radius: 100vw;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .reset-button {
-    border: 3px solid black;
+    border: calc(3 / 1920 * 100vw) solid black;
     color: black;
     background: none;
-    width: 500px;
-    height: 100px;
+    width: 20vw;
+    height: 5vw;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-left: 0 auto;
