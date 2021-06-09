@@ -7,22 +7,21 @@ body {
 }
 
 @media (max-width: 800px) {
-    /* .item {
-        border: calc(3 / 1920 * 100vw);
-    } */
+   
 }
 
-.box {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 3vw;
+.box { 
+     margin-top: 3vw;
+     display: grid;
+     grid-template-columns: repeat(90, 1fr);
+     grid-template-rows: repeat(100, 1fr);
+     width: 80vw;
+     height: calc(5 / 4 * 80vw);
 }
 
 .item {
-    width: 1vw;
-    height: 1vw;
-    border: calc(3 / 1920 * 100vw) solid black;
-    border-radius: 100vw;
+    border: 1px solid black;
+    border-radius: 9999px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

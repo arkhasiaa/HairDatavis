@@ -648,7 +648,7 @@ var filledCells = [
 ];
 
 var box = document.querySelector(".box");
-for (let index = 0; index < 3000; index++) {
+for (let index = 0; index < 6000; index++) {
   const element = document.createElement("div");
   element.classList.add("item");
   element.addEventListener("click", function () {
