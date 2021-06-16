@@ -1,33 +1,88 @@
 body {
-    max-width: 80vw;
-    height: 80vw;
-    margin: 0 auto;
-    padding-top: 7vw;
+    max-width: 95vw;
+    margin: 0;
+    padding: 7vw 2vw;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (max-width: 800px) {
-   
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
 }
+
+/* @media (max-width: 800px) {
+   
+} */
 
 .box { 
-     margin-top: 3vw;
+     margin-top: 10vw;
      display: grid;
-     grid-template-columns: repeat(90, 1fr);
-     grid-template-rows: repeat(100, 1fr);
-     width: 80vw;
-     height: calc(5 / 4 * 80vw);
+     grid-template-columns: repeat(60, 1fr);
+     grid-template-rows: repeat(200, 1fr);
+     height: calc(200 / 60 * 95vw);
 }
 
+
 .item {
-    border: 1px solid black;
+    border: 0px solid black;
     border-radius: 9999px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
 }
 
-.reset-button {
+.item-text {
+    opacity: 0;
+    position: absolute;
+    top: -1em;
+    pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    color: red;
+}
+
+.item:hover .item-text {
+    opacity: 1;
+}
+
+
+.item-text-2 {
+    opacity: 0;
+    position: absolute;
+    top: -1em;
+    pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    color: red;
+}
+
+.item:hover .item-text-2 {
+    opacity: 1;
+}
+
+.item-text-3 {
+    opacity: 0;
+    position: absolute;
+    top: -1em;
+    pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    color: red;
+}
+
+.item:hover .item-text-3 {
+    opacity: 1;
+}
+
+
+
+
+
+/* .reset-button {
     border: calc(3 / 1920 * 100vw) solid black;
     color: black;
     background: none;
@@ -44,4 +99,5 @@ body {
 .reset-button:hover {
     background: black;
     color: white;
-}
+} */
+
