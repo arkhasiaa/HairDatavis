@@ -13,7 +13,6 @@ function randomArrayItem(array) {
 }
 
 var imgArray = [
-  
 ];
 
 for (var i = 0; i < 20; i++) {
@@ -2064,8 +2063,23 @@ var filledCells_6 = [
     3997,
     4122,
     4182,
-    4242
-
+    4242,
+    3674,
+    3794,
+    3856,
+    3736,
+    3764,
+    3884,
+    3706,
+    3826,
+    3914,
+    3946,
+    3880,
+    3879,
+    3998,
+    3860,
+    3861,
+    3982
 ];
 
 // грудь, спина, торс, подбородок
@@ -2185,22 +2199,6 @@ var filledCells_7 = [
     4123,
     4183,
     4243,
-    3860,
-    3861,
-    3982,
-    3998,
-    3879,
-    3880,
-    3856,
-    3914,
-    3794,
-    3736,
-    3674,
-    3764,
-    3884,
-    3946,
-    3826,
-    3706
 ];
 
 // лобок и подмышки
@@ -5471,9 +5469,20 @@ var filledCells_16 = [
 ];
 
 
+// блок под заголовком
+var box_3 = document.querySelector(".box-3");
+for (let index = 0; index < 60; index++) {
+  const element = document.createElement("div");
+  element.classList.add("item-3");
+  // element.innerHTML = index;
+  element.style.backgroundImage = "url(tiles/tiles-06.png)";
+  box_3.appendChild(element);
+}
+
+
 // скальп
 var box = document.querySelector(".box");
-for (let index = 0; index < 12000; index++) {
+for (let index = 0; index < 10000; index++) {
   const element = document.createElement("div");
   element.classList.add("item");
 
@@ -5523,6 +5532,8 @@ for (let index = 0; index < 12000; index++) {
   });
   box.appendChild(element);
 }
+
+
 
 // // затылок
 // var box_2 = document.querySelector(".box-2");
@@ -5620,7 +5631,7 @@ cells.forEach(function (cell, cellIndex) {
 var cells_7 = document.querySelectorAll(".box-7 .item_7");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_7.includes(cellIndex)) {
-    var imageUrl_7 = "url(tiles/tiles-01.png)";
+    var imageUrl_7 = "url(tiles/tiles-04.png)";
     cell.style.backgroundImage = imageUrl_7;
     // cell.style.backgroundColor = "black";
   }
@@ -5719,6 +5730,116 @@ cells.forEach(function (cell, cellIndex) {
 });
 
 
+// блок с легендой
+var filledCellsLegend = [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  69,
+  68,
+  67,
+  66,
+  65,
+  64,
+  63,
+  62,
+  122,
+  123,
+  124,
+  182,
+  242,
+  302,
+  362,
+  422,
+  423,
+  424,
+  425,
+  426,
+  427,
+  428,
+  429,
+  369,
+  309,
+  189,
+  129,
+  125,
+  126,
+  127,
+  128,
+  183,
+  184,
+  185,
+  187,
+  188,
+  186,
+  243,
+  303,
+  244,
+  245,
+  304,
+  305,
+  246,
+  306,
+  307,
+  308,
+  247,
+  248,
+  249,
+  363,
+  364,
+  365,
+  366,
+  367,
+  368
+];
+
+
+var box_legend = document.querySelector(".box-legend");
+for (let index = 0; index < 2000; index++) {
+const element = document.createElement("div");
+element.classList.add("item-legend");
+// element.innerHTML = index;
+box_legend.appendChild(element);
+
+element.addEventListener("click", function () {
+  // если ячейка заполнена
+  if (filledCellsLegend.includes(index)) {
+    // то очистить её
+    // element.style.backgroundImage = "none";
+    element.style.backgroundColor = "white";
+    // и удалить её индекс из массива индексов заполненных ячеек
+    filledCellsLegend = filledCellsLegend.filter(function (cellIndex) {
+      return cellIndex !== index;
+    });
+  } else {
+    // если не заполнена
+    // то заполнить
+    // var imageUrl = "url(" + randomArrayItem(imgArray) + ")";
+    element.style.backgroundColor = "red";
+    // и добавить её индекс в массив индексов заполненных ячеек
+    filledCellsLegend.push(index);
+  }
+  console.log(filledCellsLegend);
+});
+box_legend.appendChild(element);
+}
+
+// легенда 1
+var cells_legend_1 = document.querySelectorAll(".box-17 .item_17");
+cells.forEach(function (cell, cellIndex) {
+  if (cells_legend_1.includes(cellIndex)) {
+    var imageUrl_16 = "url(tiles/tiles-01.png)";
+    cell.style.backgroundImage = imageUrl_16;
+    // cell.style.backgroundColor = "black";
+  }
+});
+
+
 
 // var resetButton = document.querySelector(".reset-button");
 // resetButton.addEventListener("click", function () {
@@ -5740,11 +5861,33 @@ cells.forEach(function (cell, cellIndex) {
 
 // setInterval(reset, 5000);
 
+// var setCell = 0;
+
 // setInterval (function () {
-//     var items = Array.from (document.querySelectorAll (".item")).slice(500, 900);
+//   var filledCells = cellsToFill[setCell];
+//   fillCell (filledCells);
+//   setCell++;
+// }, 10);
+
+// setInterval (function () {
+//   var indexToFill = randomArrayItem(filledCells_2);
+//   filledCells_2 = filledCells_2.filter(function (_, i){
+//     return i!==indexToFill});
+//   randomItem.style.backgroundImage = "url(" + imgArray[0] + ")";
+// }, 10);
+
+
+
+
+// setInterval (function () {
+//     var items = Array.from (document.querySelectorAll (".item")).slice(0, 900);
 //     var randomItem = randomArrayItem(items);
 //     randomItem.style.backgroundImage = "url(" + imgArray[0] + ")";
 // }, 10);
+
+// filledCells = filledCells.filter(function (cellIndex) {
+//   return cellIndex !== index;
+// });
 
 // setInterval (function () {
 //     var items = Array.from (document.querySelectorAll (".item")).slice(1000, 2000);
