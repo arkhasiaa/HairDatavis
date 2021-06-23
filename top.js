@@ -3072,6 +3072,7 @@ var filledCells_9 = [
     5591
 ];
 
+// ладони
 var filledCells_10 = [
     5616,
     5676,
@@ -5469,32 +5470,38 @@ var filledCells_16 = [
 ];
 
 
+var headerCells = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+];
+
 // блок под заголовком
 var box_3 = document.querySelector(".box-3");
 for (let index = 0; index < 60; index++) {
   const element = document.createElement("div");
   element.classList.add("item-3");
-  // element.innerHTML = index;
-  element.style.backgroundImage = "url(tiles/tiles-06.png)";
+  if (headerCells.includes(index)) {
+    element.style.backgroundImage = "url(tiles/tiles-01.png)";
+  }
   box_3.appendChild(element);
 }
 
 
+
 // скальп
 var box = document.querySelector(".box");
-for (let index = 0; index < 10000; index++) {
+for (let index = 0; index < 10020; index++) {
   const element = document.createElement("div");
   element.classList.add("item");
 
-  // текст появляется при наведении на область тела
+  // текст появляется при наведении на область тела скальп
   if (filledCells.includes(index)) {
     var elementText = document.createElement("div");
     elementText.classList.add("item-text");
-    elementText.innerText = "scalp";
+    elementText.innerText = "scalp and lalala";
     element.appendChild(elementText);
   }
 
-  // текст появляется при наведении на область тела
+  // текст затылок
   if (filledCells_2.includes(index)) {
     var elementText = document.createElement("div");
     elementText.classList.add("item-text-2");
@@ -5502,11 +5509,100 @@ for (let index = 0; index < 10000; index++) {
     element.appendChild(elementText);
   }
 
-  // текст появляется при наведении на область тела
+  // текст уши
   if (filledCells_3.includes(index)) {
     var elementText = document.createElement("div");
     elementText.classList.add("item-text-3");
     elementText.innerText = "ears";
+    element.appendChild(elementText);
+  }
+
+  // текст борода
+  if (filledCells_5.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-4");
+    elementText.innerText = "beard and mustache";
+    element.appendChild(elementText);
+  }
+
+  // текст брови
+  if (filledCells_15.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-5");
+    elementText.innerText = "eyebrows";
+    element.appendChild(elementText);
+  }
+
+  // текст ресницы и нос
+  if (filledCells_16.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-6");
+    elementText.innerText = "eyelashes and vibrissae";
+    element.appendChild(elementText);
+  }
+
+  // текст тело
+  if (filledCells_6.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-7");
+    elementText.innerText = "body";
+    element.appendChild(elementText);
+  }
+
+   // текст лобок и подмышки
+   if (filledCells_8.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-8");
+    elementText.innerText = "pubis and armpits";
+    element.appendChild(elementText);
+  }
+
+  // текст грудь, спина, торс, подбородок
+  if (filledCells_7.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-9");
+    elementText.innerText = "torso hair";
+    element.appendChild(elementText);
+  }
+
+
+  // текст руки
+  if (filledCells_9.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-10");
+    elementText.innerText = "arms";
+    element.appendChild(elementText);
+  }
+  
+  // текст волосы на руках
+  if (filledCells_11.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-11");
+    elementText.innerText = "arm hair";
+    element.appendChild(elementText);
+  }
+
+  // текст ладони
+  if (filledCells_10.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-12");
+    elementText.innerText = "hand";
+    element.appendChild(elementText);
+  }
+
+  // текст ноги
+  if (filledCells_12.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-13");
+    elementText.innerText = "legs and hips";
+    element.appendChild(elementText);
+  }
+
+  // текст волосы на ногах
+  if (filledCells_13.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text-14");
+    elementText.innerText = "leg hair";
     element.appendChild(elementText);
   }
 
@@ -5567,13 +5663,29 @@ for (let index = 0; index < 10000; index++) {
 // }
 
 
+
+function toggleCell(cell, imageUrl, onTimeout, offTimeout) {
+  var isFilled = cell.style.backgroundImage !== "";
+  var timeout = isFilled ? offTimeout : Math.random() * onTimeout;
+  setTimeout(function () {
+    if (isFilled) {
+      cell.style.backgroundImage = "";
+    } else {
+      cell.style.backgroundImage = imageUrl;
+    }
+
+    toggleCell(cell, imageUrl, onTimeout, offTimeout);
+  }, timeout);
+}
+
+
 // скальп
 var cells = document.querySelectorAll(".item");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells.includes(cellIndex)) {
     var imageUrl = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl;
+    toggleCell(cell, imageUrl, 3000, 5000);
   }
 });
 
@@ -5582,8 +5694,8 @@ var cells_2 = document.querySelectorAll(".box-2 .item_2");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_2.includes(cellIndex)) {
     var imageUrl_2 = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl_2;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_2;
+    toggleCell(cell, imageUrl_2, 2000, 7000);
   }
 });
 
@@ -5593,7 +5705,6 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_3.includes(cellIndex)) {
     var imageUrl_3 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_3;
-    // cell.style.backgroundColor = "black";
   }
 });
 
@@ -5602,8 +5713,8 @@ var cells_4 = document.querySelectorAll(".box-4 .item_4");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_4.includes(cellIndex)) {
     var imageUrl_4 = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl_4;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_4;
+    toggleCell(cell, imageUrl_4, 2000, 7000);
   }
 });
 
@@ -5612,8 +5723,8 @@ var cells_5 = document.querySelectorAll(".box-5 .item_5");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_5.includes(cellIndex)) {
     var imageUrl_5 = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl_5;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_5;
+    toggleCell(cell, imageUrl_5, 3000, 5000);
   }
 });
 
@@ -5623,27 +5734,26 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_6.includes(cellIndex)) {
     var imageUrl_6 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_6;
-    // cell.style.backgroundColor = "black";
   }
 });
 
-// грудь, спина, торс, подбородок
+// волосы: грудь, спина, торс, подбородок
 var cells_7 = document.querySelectorAll(".box-7 .item_7");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_7.includes(cellIndex)) {
     var imageUrl_7 = "url(tiles/tiles-04.png)";
-    cell.style.backgroundImage = imageUrl_7;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_7;
+    toggleCell(cell, imageUrl_7, 3000, 5000);
   }
 });
 
-// лобок и подмышки
+// волосы: лобок и подмышки
 var cells_8 = document.querySelectorAll(".box-8 .item_8");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_8.includes(cellIndex)) {
     var imageUrl_8 = "url(tiles/tiles-01.png)";
     cell.style.backgroundImage = imageUrl_8;
-    // cell.style.backgroundColor = "black";
+    toggleCell(cell, imageUrl_8, 3000, 5000);
   }
 });
 
@@ -5654,7 +5764,6 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_9.includes(cellIndex)) {
     var imageUrl_9 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_9;
-    // cell.style.backgroundColor = "black";
   }
 });
 
@@ -5664,7 +5773,6 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_10.includes(cellIndex)) {
     var imageUrl_10 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_10;
-    // cell.style.backgroundColor = "black";
   }
 });
 
@@ -5673,8 +5781,8 @@ var cells_11 = document.querySelectorAll(".box-11 .item_11");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_11.includes(cellIndex)) {
     var imageUrl_11 = "url(tiles/tiles-04.png)";
-    cell.style.backgroundImage = imageUrl_11;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_11;
+    toggleCell(cell, imageUrl_11, 3000, 5000);
   }
 });
 
@@ -5684,7 +5792,6 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_12.includes(cellIndex)) {
     var imageUrl_12 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_12;
-    // cell.style.backgroundColor = "black";
   }
 });
 
@@ -5693,8 +5800,8 @@ var cells_13 = document.querySelectorAll(".box-13 .item_13");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_13.includes(cellIndex)) {
     var imageUrl_13 = "url(tiles/tiles-04.png)";
-    cell.style.backgroundImage = imageUrl_13;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_13;
+    toggleCell(cell, imageUrl_13, 3000, 5000);
   }
 });
 
@@ -5704,7 +5811,6 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_14.includes(cellIndex)) {
     var imageUrl_14 = "url(tiles/tiles-06.png)";
     cell.style.backgroundImage = imageUrl_14;
-    // cell.style.backgroundColor = "black";
   }
 });
 
@@ -5714,8 +5820,8 @@ var cells_15 = document.querySelectorAll(".box-15 .item_15");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_15.includes(cellIndex)) {
     var imageUrl_15 = "url(tiles/tiles-02.png)";
-    cell.style.backgroundImage = imageUrl_15;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_15;
+    toggleCell(cell, imageUrl_15, 3000, 5000);
   }
 });
 
@@ -5724,8 +5830,8 @@ var cells_16 = document.querySelectorAll(".box-16 .item_16");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_16.includes(cellIndex)) {
     var imageUrl_16 = "url(tiles/tiles-03.png)";
-    cell.style.backgroundImage = imageUrl_16;
-    // cell.style.backgroundColor = "black";
+    // cell.style.backgroundImage = imageUrl_16;
+    toggleCell(cell, imageUrl_16, 3000, 5000);
   }
 });
 
@@ -5829,16 +5935,31 @@ element.addEventListener("click", function () {
 box_legend.appendChild(element);
 }
 
-// легенда 1
+// ячейки 2-го бокса, легенда 1
+var cells_2 = document.querySelectorAll(".box-legend .item-legend");
+
+// бокс 2, легенда 1
 var cells_legend_1 = document.querySelectorAll(".box-17 .item_17");
-cells.forEach(function (cell, cellIndex) {
-  if (cells_legend_1.includes(cellIndex)) {
+cells_2.forEach(function (cell, cellIndex) {
+  if (filledCellsLegend.includes(cellIndex)) {
     var imageUrl_16 = "url(tiles/tiles-01.png)";
     cell.style.backgroundImage = imageUrl_16;
     // cell.style.backgroundColor = "black";
   }
 });
 
+// ячейки 2-го бокса, легенда 2
+var cells_3 = document.querySelectorAll(".box-legend .item-legend");
+
+// бокс 2, легенда 2
+var cells_legend_2 = document.querySelectorAll(".box-17 .item_17");
+cells_3.forEach(function (cell, cellIndex) {
+  if (filledCellsLegend.includes(cellIndex)) {
+    var imageUrl_16 = "url(tiles/tiles-01.png)";
+    cell.style.backgroundImage = imageUrl_16;
+    // cell.style.backgroundColor = "black";
+  }
+});
 
 
 // var resetButton = document.querySelector(".reset-button");
