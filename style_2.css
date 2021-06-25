@@ -1,0 +1,312 @@
+body {
+  max-width: 95vw;
+  margin: 0;
+  padding: 6vw 2vw;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 800px) {
+
+} */
+
+.item-3 {
+  border: 0px solid black;
+  border-radius: 9999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box-3 {
+  margin-top: -2.4vw;
+  /* margin: 0 auto; */
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: calc(1 / 60 * 95vw);
+}
+
+.box {
+  margin-top: 3vw;
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: repeat(170, 1fr);
+  height: calc(170 / 60 * 95vw);
+  overflow: hidden;
+}
+
+.item {
+  border: 1px solid black;
+  border-radius: 9999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.item-text {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  background-color: white;
+  z-index: 100;
+  padding: 1vw;
+}
+
+.item-text > h2 {
+  font-size: 4vw;
+  margin: 0;
+  margin-bottom: 1vw;
+  text-align: left;
+}
+
+.item-text > p {
+  font-size: 2vw;
+  margin: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.item:hover .item-text {
+  opacity: 1;
+}
+
+.item-text-2 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+}
+
+.item:hover .item-text-2 {
+  opacity: 1;
+}
+
+.item-text-3 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+}
+
+.item:hover .item-text-3 {
+  opacity: 1;
+}
+
+.item-text-4 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-4 {
+  opacity: 1;
+}
+
+.item-text-5 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-5 {
+  opacity: 1;
+}
+
+.item-text-6 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-6 {
+  opacity: 1;
+}
+
+.item-text-7 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-7 {
+  opacity: 1;
+}
+
+.item-text-8 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-8 {
+  opacity: 1;
+}
+
+.item-text-9 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-9 {
+  opacity: 1;
+}
+
+.item-text-10 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-10 {
+  opacity: 1;
+}
+
+.item-text-11 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-11 {
+  opacity: 1;
+}
+
+.item-text-12 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-12 {
+  opacity: 1;
+}
+
+.item-text-13 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-13 {
+  opacity: 1;
+}
+
+.item-text-14 {
+  opacity: 0;
+  position: absolute;
+  top: -1em;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  color: red;
+  background-color: white;
+}
+
+.item:hover .item-text-14 {
+  opacity: 1;
+}
+
+.box-legend {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  height: calc(100 / 60 * 95vw);
+}
+
+.item-legend {
+  border: 1px solid black;
+  border-radius: 9999px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* .reset-button {
+    border: calc(3 / 1920 * 100vw) solid black;
+    color: black;
+    background: none;
+    width: 20vw;
+    height: 5vw;
+    text-transform: uppercase;
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 0 auto;
+    transition: 0;
+}
+
+.reset-button:hover {
+    background: black;
+    color: white;
+} */

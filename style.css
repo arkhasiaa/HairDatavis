@@ -1,7 +1,7 @@
 body {
     max-width: 95vw;
     margin: 0;
-    padding: 6vw 2vw;
+    padding: 3vw 2vw;
 }
 
 p {
@@ -10,6 +10,28 @@ p {
     text-transform: uppercase;
     text-align: center;
     margin: 0 auto;
+}
+
+.imgg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    max-width: 55vw;
+    /* height: 2vw; */
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    top: 7.5vw;
+}
+
+.imgg2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+    /* height: 2vw; */
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    top: 310vw;
 }
 
 /* @media (max-width: 800px) {
@@ -21,7 +43,7 @@ p {
     border-radius: 9999px;
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     position: relative;
 }
 
@@ -37,11 +59,12 @@ p {
 
 
 .box { 
-     margin-top: 3vw;
+     margin-top: 5vw;
      display: grid;
      grid-template-columns: repeat(60, 1fr);
      grid-template-rows: repeat(170, 1fr);
      height: calc(170 / 60 * 95vw);
+     overflow: hidden;
 }
 
 
@@ -50,7 +73,7 @@ p {
     border-radius: 9999px;
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     position: relative;
 }
 
@@ -60,10 +83,33 @@ p {
     top: -1em;
     pointer-events: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2vw;
-    color: red;
+    /* font-size: 2vw; */
+    color: black;
     background-color: white;
+    border: 0.3vw solid black;
+    padding: 1vw;
+    z-index: 100;
 }
+
+.item-text > h2 {
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 0.5vw;
+    margin-top: 0vw;
+    margin-right: 4vw;
+    text-align: left;
+    /* интерлиньяж */
+    line-height: 1;
+    
+  }
+  
+  .item-text > p {
+    font-size: 0.8vw;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    margin-top: 1vw;
+  }
 
 .item:hover .item-text {
     opacity: 1;
@@ -76,9 +122,31 @@ p {
     top: -1em;
     pointer-events: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vw;
-    color: red;
+    /* font-size: 2vw; */
+    color: black;
+    background-color: white;
+    border: 0.3vw solid black;
+    padding: 1vw;
+    z-index: 100;
 }
+
+.item-text-2 > h3 {
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 0.5vw;
+    margin-top: 0vw;
+    margin-right: 2vw;
+    text-align: left;
+    
+  }
+  
+  .item-text-2 > p {
+    font-size: 1vw;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    margin-bottom: 0.5vw;
+  }
 
 .item:hover .item-text-2 {
     opacity: 1;
@@ -92,6 +160,8 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3vw;
     color: red;
+    background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-3 {
@@ -104,14 +174,37 @@ p {
     top: -1em;
     pointer-events: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vw;
-    color: red;
+    color: black;
     background-color: white;
+    border: 0.3vw solid black;
+    padding: 1vw;
+    z-index: 100;
 }
+
+.item-text-4 > h4 {
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 0.5vw;
+    margin-top: 0vw;
+    margin-right: 2vw;
+    text-align: left;
+    line-height: 0.9;
+    
+  }
+  
+  .item-text-4 > p {
+    font-size: 1vw;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    margin-bottom: 0.5vw;
+    margin-top: 1vw;
+  }
 
 .item:hover .item-text-4 {
     opacity: 1;
 }
+
 
 .item-text-5 {
     opacity: 0;
@@ -122,6 +215,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-5 {
@@ -137,6 +231,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-6 {
@@ -152,6 +247,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-7 {
@@ -167,6 +263,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-8 {
@@ -182,6 +279,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-9 {
@@ -198,6 +296,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-10 {
@@ -213,6 +312,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-11 {
@@ -228,6 +328,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-12 {
@@ -243,6 +344,7 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-13 {
@@ -258,13 +360,15 @@ p {
     font-size: 3vw;
     color: red;
     background-color: white;
+    z-index: 100;
 }
 
 .item:hover .item-text-14 {
     opacity: 1;
 }
 
-.box-legend {
+
+/* .box-legend {
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(60, 1fr);
@@ -279,7 +383,7 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
-}
+} */
 
 
 /* .reset-button {

@@ -2082,7 +2082,7 @@ var filledCells_6 = [
     3982
 ];
 
-// грудь, спина, торс, подбородок
+// торс, подбородок
 var filledCells_7 = [
     2430,
     2490,
@@ -2201,26 +2201,64 @@ var filledCells_7 = [
     4243,
 ];
 
-// лобок и подмышки
+// волосы грудь спина
+var filledCells_19 = [
+  
+  1125,
+  3194,
+  3314,
+  3434,
+  3376,
+  3256,
+  3854,
+  3734,
+  3614,
+  3676,
+  3796,
+  3824,
+  3704,
+  3646,
+  3766,
+  3886,
+  3284,
+  3404,
+  3226,
+  3346,
+  3466,
+  3042,
+  2980,
+  2860,
+  2802,
+  2922,
+  3018,
+  2960,
+  2840,
+  2898,
+  2778,
+  3027,
+  2969,
+  2849,
+  2787,
+  2907,
+  3033,
+  2913,
+  2793,
+  2851,
+  2971,
+  3271,
+  3269,
+  3389,
+  3391,
+  3453,
+  3333,
+  3213,
+  3207,
+  3447,
+  3327
+];
+
+// подмышки
 var filledCells_8 = [
-    4510,
-    4450,
-    4511,
-    4451,
-    4408,
-    4409,
-    4469,
-    4468,
-    4527,
-    4411,
-    4471,
-    4472,
-    4412,
-    4533,
-    4489,
-    4490,
-    4550,
-    4549,
     3158,
     3218,
     3278,
@@ -3712,7 +3750,7 @@ var filledCells_11 = [
     6287,
 ];
 
-// ноги
+// ноги и бёдра
 var filledCells_12 = [
     7517,
     7516,
@@ -4956,7 +4994,7 @@ var filledCells_12 = [
     8906
 ];
 
-// волосы на ногах
+// волосы на ногах и бёдра
 var filledCells_13 = [
     7809,
     7869,
@@ -5005,7 +5043,16 @@ var filledCells_13 = [
     9815,
     9816,
     9876,
-    9875
+    9875,
+    4450, 
+    4549,
+    4510,
+    4550,
+    4490,
+    4490,
+    4489,
+    4511,
+    4451
 ];
 
 // лицо
@@ -5451,7 +5498,7 @@ var filledCells_15 = [
     1289
 ];
 
-// ресницы и нос
+// ресницы
 var filledCells_16 = [
     1283,
     1223,
@@ -5465,10 +5512,27 @@ var filledCells_16 = [
     1236,
     1237,
     1297,
-    1649,
-    1651
 ];
 
+// нос
+var filledCells_17 = [
+  1649,
+  1651
+];
+
+// лобок
+var filledCells_18 = [
+  4408,
+  4409,
+  4469,
+  4468,
+  4527,
+  4411,
+  4471,
+  4472,
+  4412,
+  4533
+];
 
 var headerCells = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
@@ -5497,71 +5561,177 @@ for (let index = 0; index < 10020; index++) {
   if (filledCells.includes(index)) {
     var elementText = document.createElement("div");
     elementText.classList.add("item-text");
-    elementText.innerText = "scalp and lalala";
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "scalp";
+    elementTextParagraph.innerHTML =
+      "350 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 50-100";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст затылок
   if (filledCells_2.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-2");
-    elementText.innerText = "occiput";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "occupit";
+    elementTextParagraph.innerHTML =
+      "350 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 50-100";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст уши
   if (filledCells_3.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-3");
-    elementText.innerText = "ears";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "ear";
+    elementText.appendChild(elementTextHeader);
+    element.appendChild(elementText);
+  }
+
+  // текст волосы в ушах
+  if (filledCells_4.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "ear hair";
+    // elementTextParagraph.innerHTML = "bristly hair";
+    elementText.appendChild(elementTextHeader);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст борода
   if (filledCells_5.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-4");
-    elementText.innerText = "beard and mustache";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "beard, mustache";
+    elementTextParagraph.innerHTML =
+      "500-880 follicles per cm&sup2; <br/> Daily growth rate 0.32-0.38 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст брови
   if (filledCells_15.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-5");
-    elementText.innerText = "eyebrows";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "eyebrows";
+    elementTextParagraph.innerHTML =
+      "Daily growth rate 0.14-0.16 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
-  // текст ресницы и нос
+  // текст ресницы
   if (filledCells_16.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-6");
-    elementText.innerText = "eyelashes and vibrissae";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "eyelashes";
+    elementTextParagraph.innerHTML =
+      "Daily growth rate 0.12 mm <br/> Upper eyelid 90-160 hairs <br/> Lower eyelid 75-80 hairs";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
+    element.appendChild(elementText);
+  }
+
+  // текст нос
+  if (filledCells_17.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "vibrissae";
+    elementTextParagraph.innerHTML =
+      "The number of hairs 200";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
+    element.appendChild(elementText);
+  }
+
+  // текст лицо
+  if (filledCells_14.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "face";
+    // elementTextParagraph.innerHTML =
+    //   "Daily growth rate 0.14-0.16 mm";
+    elementText.appendChild(elementTextHeader);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст тело
   if (filledCells_6.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-7");
-    elementText.innerText = "body";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "trunk";
+    elementTextParagraph.innerHTML =
+      "70 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
-   // текст лобок и подмышки
+   // подмышки
    if (filledCells_8.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-8");
-    elementText.innerText = "pubis and armpits";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "armpit hair";
+    elementTextParagraph.innerHTML =
+      "65 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
-  // текст грудь, спина, торс, подбородок
+  // лобок
+  if (filledCells_18.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "pubic area";
+    elementTextParagraph.innerHTML =
+      "70 follicles per cm&sup2;";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
+    element.appendChild(elementText);
+  }
+
+  // текст волосы тело
   if (filledCells_7.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-9");
-    elementText.innerText = "torso hair";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "trunk hair";
+    elementTextParagraph.innerHTML =
+      "70 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5569,40 +5739,84 @@ for (let index = 0; index < 10020; index++) {
   // текст руки
   if (filledCells_9.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-10");
-    elementText.innerText = "arms";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "arm";
+    // elementTextParagraph.innerHTML =
+    //   "";
+    elementText.appendChild(elementTextHeader);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
   
   // текст волосы на руках
   if (filledCells_11.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-11");
-    elementText.innerText = "arm hair";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "arm hair";
+    elementTextParagraph.innerHTML =
+      "80 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
   // текст ладони
   if (filledCells_10.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-12");
-    elementText.innerText = "hand";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "hand";
+    // elementTextParagraph.innerHTML =
+    //   "";
+    elementText.appendChild(elementTextHeader);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
-  // текст ноги
+  // текст ноги и бёдра
   if (filledCells_12.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-13");
-    elementText.innerText = "legs and hips";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "legs, thighs";
+    // elementTextParagraph.innerHTML =
+    //   "60 follicles per cm&sup2; <br/> Daily growth rate 0.21 mm";
+    elementText.appendChild(elementTextHeader);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
-  // текст волосы на ногах
+  // текст волосы ноги и бёдра
   if (filledCells_13.includes(index)) {
     var elementText = document.createElement("div");
-    elementText.classList.add("item-text-14");
-    elementText.innerText = "leg hair";
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "legs, thighs hair";
+    elementTextParagraph.innerHTML =
+      "60 follicles per cm&sup2; <br/> Daily growth rate 0.21 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
+    element.appendChild(elementText);
+  }
+
+  // текст волосы грудь спина
+  if (filledCells_19.includes(index)) {
+    var elementText = document.createElement("div");
+    elementText.classList.add("item-text");
+    var elementTextHeader = document.createElement("h2");
+    var elementTextParagraph = document.createElement("p");
+    elementTextHeader.innerText = "chest, back";
+    elementTextParagraph.innerHTML =
+      "65 follicles per cm&sup2; <br/> Daily growth rate 0.35 mm";
+    elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5620,7 +5834,7 @@ for (let index = 0; index < 10020; index++) {
       // если не заполнена
       // то заполнить
       // var imageUrl = "url(" + randomArrayItem(imgArray) + ")";
-      element.style.backgroundColor = "red";
+      element.style.backgroundColor = "black";
       // и добавить её индекс в массив индексов заполненных ячеек
       filledCells.push(index);
     }
@@ -5737,7 +5951,7 @@ cells.forEach(function (cell, cellIndex) {
   }
 });
 
-// волосы: грудь, спина, торс, подбородок
+// волосы: торс, подбородок
 var cells_7 = document.querySelectorAll(".box-7 .item_7");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_7.includes(cellIndex)) {
@@ -5747,7 +5961,17 @@ cells.forEach(function (cell, cellIndex) {
   }
 });
 
-// волосы: лобок и подмышки
+// волосы: грудь, спина
+var cells_19 = document.querySelectorAll(".box-19 .item_19");
+cells.forEach(function (cell, cellIndex) {
+  if (filledCells_19.includes(cellIndex)) {
+    var imageUrl_7 = "url(tiles/tiles-04.png)";
+    // cell.style.backgroundImage = imageUrl_7;
+    toggleCell(cell, imageUrl_7, 3000, 5000);
+  }
+});
+
+// волосы: подмышки
 var cells_8 = document.querySelectorAll(".box-8 .item_8");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_8.includes(cellIndex)) {
@@ -5825,11 +6049,31 @@ cells.forEach(function (cell, cellIndex) {
   }
 });
 
-// ресницы и волосы в носу
+// ресницы 
 var cells_16 = document.querySelectorAll(".box-16 .item_16");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_16.includes(cellIndex)) {
     var imageUrl_16 = "url(tiles/tiles-03.png)";
+    // cell.style.backgroundImage = imageUrl_16;
+    toggleCell(cell, imageUrl_16, 3000, 5000);
+  }
+});
+
+// нос
+var cells_17 = document.querySelectorAll(".box-17 .item_17");
+cells.forEach(function (cell, cellIndex) {
+  if (filledCells_17.includes(cellIndex)) {
+    var imageUrl_16 = "url(tiles/tiles-03.png)";
+    // cell.style.backgroundImage = imageUrl_16;
+    toggleCell(cell, imageUrl_16, 3000, 5000);
+  }
+});
+
+// лобок
+var cells_18 = document.querySelectorAll(".box-18 .item_18");
+cells.forEach(function (cell, cellIndex) {
+  if (filledCells_18.includes(cellIndex)) {
+    var imageUrl_16 = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl_16;
     toggleCell(cell, imageUrl_16, 3000, 5000);
   }
@@ -5926,7 +6170,7 @@ element.addEventListener("click", function () {
     // если не заполнена
     // то заполнить
     // var imageUrl = "url(" + randomArrayItem(imgArray) + ")";
-    element.style.backgroundColor = "red";
+    element.style.backgroundColor = "black";
     // и добавить её индекс в массив индексов заполненных ячеек
     filledCellsLegend.push(index);
   }
