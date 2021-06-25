@@ -86,7 +86,7 @@ p {
     /* font-size: 2vw; */
     color: black;
     background-color: white;
-    border: 0.3vw solid black;
+    border: 0.1vw solid black;
     padding: 1vw;
     z-index: 100;
 }

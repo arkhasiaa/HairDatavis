@@ -434,8 +434,7 @@ var filledCells = [
     1063,
     1064,
     1065,
-    1125
-];
+]
 
 // // затылок
 var filledCells_2 = [
@@ -1603,13 +1602,8 @@ var filledCells_6 = [
     3855,
     3975,
     3974,
-    3854,
-    3734,
-    3614,
     3556,
     3616,
-    3676,
-    3796,
     3916,
     3976,
     3973,
@@ -1869,10 +1863,8 @@ var filledCells_6 = [
     3643,
     3703,
     3644,
-    3704,
     3645,
     3705,
-    3646,
     3751,
     3811,
     3812,
@@ -1897,10 +1889,8 @@ var filledCells_6 = [
     3822,
     3763,
     3823,
-    3824,
     3765,
     3825,
-    3766,
     3871,
     3931,
     3872,
@@ -1924,7 +1914,6 @@ var filledCells_6 = [
     3944,
     3885,
     3945,
-    3886,
     3991,
     4051,
     3992,
@@ -2109,56 +2098,7 @@ var filledCells_7 = [
     2438,
     2362,
     2422,
-    2851,
-    2849,
-    2969,
-    2971,
-    2793,
-    2913,
-    3033,
-    2787,
-    2907,
-    3027,
-    2860,
-    2980,
-    2802,
-    2922,
-    3042,
-    2840,
-    2960,
-    2778,
-    2898,
-    3018,
-    3207,
-    3327,
-    3447,
-    3213,
-    3333,
-    3453,
-    3271,
-    3391,
-    3269,
-    3389,
-    3256,
-    3376,
-    3194,
-    3314,
-    3434,
-    3284,
-    3404,
-    3226,
-    3346,
-    3466,
-    3646,
-    3766,
-    3886,
-    3704,
     3824,
-    3614,
-    3734,
-    3854,
-    3676,
-    3796,
     3627,
     3626,
     3625,
@@ -2215,7 +2155,6 @@ var filledCells_19 = [
   3614,
   3676,
   3796,
-  3824,
   3704,
   3646,
   3766,
@@ -5592,7 +5531,9 @@ for (let index = 0; index < 10020; index++) {
     var elementTextHeader = document.createElement("h2");
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "ear";
+    elementTextParagraph.innerHTML = "0 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 0";
     elementText.appendChild(elementTextHeader);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5603,9 +5544,9 @@ for (let index = 0; index < 10020; index++) {
     var elementTextHeader = document.createElement("h2");
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "ear hair";
-    // elementTextParagraph.innerHTML = "bristly hair";
+    elementTextParagraph.innerHTML = "10 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 0";
     elementText.appendChild(elementTextHeader);
-    // elementText.appendChild(elementTextParagraph);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5651,7 +5592,7 @@ for (let index = 0; index < 10020; index++) {
     element.appendChild(elementText);
   }
 
-  // текст нос
+  // текст волосы нос
   if (filledCells_17.includes(index)) {
     var elementText = document.createElement("div");
     elementText.classList.add("item-text");
@@ -5672,10 +5613,10 @@ for (let index = 0; index < 10020; index++) {
     var elementTextHeader = document.createElement("h2");
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "face";
-    // elementTextParagraph.innerHTML =
-    //   "Daily growth rate 0.14-0.16 mm";
+    elementTextParagraph.innerHTML =
+      "10 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 0";
     elementText.appendChild(elementTextHeader);
-    // elementText.appendChild(elementTextParagraph);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5686,10 +5627,10 @@ for (let index = 0; index < 10020; index++) {
     var elementTextHeader = document.createElement("h2");
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "trunk";
-    elementTextParagraph.innerHTML =
-      "70 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
+    // elementTextParagraph.innerHTML =
+    //   "70 follicles per cm&sup2; <br/> Daily growth rate 0.30 mm";
     elementText.appendChild(elementTextHeader);
-    elementText.appendChild(elementTextParagraph);
+    // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5771,10 +5712,10 @@ for (let index = 0; index < 10020; index++) {
     var elementTextHeader = document.createElement("h2");
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "hand";
-    // elementTextParagraph.innerHTML =
-    //   "";
+    elementTextParagraph.innerHTML =
+      "0 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 0";
     elementText.appendChild(elementTextHeader);
-    // elementText.appendChild(elementTextParagraph);
+    elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
   }
 
@@ -5786,7 +5727,7 @@ for (let index = 0; index < 10020; index++) {
     var elementTextParagraph = document.createElement("p");
     elementTextHeader.innerText = "legs, thighs";
     // elementTextParagraph.innerHTML =
-    //   "60 follicles per cm&sup2; <br/> Daily growth rate 0.21 mm";
+    //   "10 follicles per cm&sup2; <br/> Daily growth rate 0.35&nbsp;mm <br/> Hair loss per day 0";
     elementText.appendChild(elementTextHeader);
     // elementText.appendChild(elementTextParagraph);
     element.appendChild(elementText);
@@ -6043,7 +5984,7 @@ cells.forEach(function (cell, cellIndex) {
 var cells_15 = document.querySelectorAll(".box-15 .item_15");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_15.includes(cellIndex)) {
-    var imageUrl_15 = "url(tiles/tiles-02.png)";
+    var imageUrl_15 = "url(tiles/tiles-03.png)";
     // cell.style.backgroundImage = imageUrl_15;
     toggleCell(cell, imageUrl_15, 3000, 5000);
   }
@@ -6053,7 +5994,7 @@ cells.forEach(function (cell, cellIndex) {
 var cells_16 = document.querySelectorAll(".box-16 .item_16");
 cells.forEach(function (cell, cellIndex) {
   if (filledCells_16.includes(cellIndex)) {
-    var imageUrl_16 = "url(tiles/tiles-03.png)";
+    var imageUrl_16 = "url(tiles/tiles-02.png)";
     // cell.style.backgroundImage = imageUrl_16;
     toggleCell(cell, imageUrl_16, 3000, 5000);
   }
