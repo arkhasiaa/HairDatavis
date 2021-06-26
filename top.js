@@ -5840,7 +5840,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells.includes(cellIndex)) {
     var imageUrl = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl;
-    toggleCell(cell, imageUrl, 3000, 5000);
+    toggleCell(cell, imageUrl, 5000, 10000);
   }
 });
 
@@ -5850,7 +5850,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_2.includes(cellIndex)) {
     var imageUrl_2 = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl_2;
-    toggleCell(cell, imageUrl_2, 2000, 7000);
+    toggleCell(cell, imageUrl_2, 5000, 10000);
   }
 });
 
@@ -5869,7 +5869,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_4.includes(cellIndex)) {
     var imageUrl_4 = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl_4;
-    toggleCell(cell, imageUrl_4, 2000, 7000);
+    toggleCell(cell, imageUrl_4, 3000, 7000);
   }
 });
 
@@ -5879,7 +5879,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_5.includes(cellIndex)) {
     var imageUrl_5 = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl_5;
-    toggleCell(cell, imageUrl_5, 3000, 5000);
+    toggleCell(cell, imageUrl_5, 5000, 5000);
   }
 });
 
@@ -5898,7 +5898,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_7.includes(cellIndex)) {
     var imageUrl_7 = "url(tiles/tiles-04.png)";
     // cell.style.backgroundImage = imageUrl_7;
-    toggleCell(cell, imageUrl_7, 3000, 5000);
+    toggleCell(cell, imageUrl_7, 1248, 1248);
   }
 });
 
@@ -5908,7 +5908,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_19.includes(cellIndex)) {
     var imageUrl_7 = "url(tiles/tiles-04.png)";
     // cell.style.backgroundImage = imageUrl_7;
-    toggleCell(cell, imageUrl_7, 3000, 5000);
+    toggleCell(cell, imageUrl_7, 1248, 1248);
   }
 });
 
@@ -5918,7 +5918,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_8.includes(cellIndex)) {
     var imageUrl_8 = "url(tiles/tiles-01.png)";
     cell.style.backgroundImage = imageUrl_8;
-    toggleCell(cell, imageUrl_8, 3000, 5000);
+    toggleCell(cell, imageUrl_8, 2000, 2000);
   }
 });
 
@@ -5947,7 +5947,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_11.includes(cellIndex)) {
     var imageUrl_11 = "url(tiles/tiles-04.png)";
     // cell.style.backgroundImage = imageUrl_11;
-    toggleCell(cell, imageUrl_11, 3000, 5000);
+    toggleCell(cell, imageUrl_11, 1248, 1248);
   }
 });
 
@@ -5966,7 +5966,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_13.includes(cellIndex)) {
     var imageUrl_13 = "url(tiles/tiles-04.png)";
     // cell.style.backgroundImage = imageUrl_13;
-    toggleCell(cell, imageUrl_13, 3000, 5000);
+    toggleCell(cell, imageUrl_13, 1248, 1248);
   }
 });
 
@@ -5986,7 +5986,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_15.includes(cellIndex)) {
     var imageUrl_15 = "url(tiles/tiles-03.png)";
     // cell.style.backgroundImage = imageUrl_15;
-    toggleCell(cell, imageUrl_15, 3000, 5000);
+    toggleCell(cell, imageUrl_15, 832, 832);
   }
 });
 
@@ -6016,7 +6016,7 @@ cells.forEach(function (cell, cellIndex) {
   if (filledCells_18.includes(cellIndex)) {
     var imageUrl_16 = "url(tiles/tiles-01.png)";
     // cell.style.backgroundImage = imageUrl_16;
-    toggleCell(cell, imageUrl_16, 3000, 5000);
+    toggleCell(cell, imageUrl_16, 416, 416);
   }
 });
 
