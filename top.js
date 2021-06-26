@@ -6090,61 +6090,61 @@ var filledCellsLegend = [
 ];
 
 
-var box_legend = document.querySelector(".box-legend");
-for (let index = 0; index < 2000; index++) {
-const element = document.createElement("div");
-element.classList.add("item-legend");
-// element.innerHTML = index;
-box_legend.appendChild(element);
+// var box_legend = document.querySelector(".box-legend");
+// for (let index = 0; index < 2000; index++) {
+// const element = document.createElement("div");
+// element.classList.add("item-legend");
+// // element.innerHTML = index;
+// box_legend.appendChild(element);
 
-element.addEventListener("click", function () {
-  // если ячейка заполнена
-  if (filledCellsLegend.includes(index)) {
-    // то очистить её
-    // element.style.backgroundImage = "none";
-    element.style.backgroundColor = "white";
-    // и удалить её индекс из массива индексов заполненных ячеек
-    filledCellsLegend = filledCellsLegend.filter(function (cellIndex) {
-      return cellIndex !== index;
-    });
-  } else {
-    // если не заполнена
-    // то заполнить
-    // var imageUrl = "url(" + randomArrayItem(imgArray) + ")";
-    element.style.backgroundColor = "black";
-    // и добавить её индекс в массив индексов заполненных ячеек
-    filledCellsLegend.push(index);
-  }
-  console.log(filledCellsLegend);
-});
-box_legend.appendChild(element);
-}
+// element.addEventListener("click", function () {
+//   // если ячейка заполнена
+//   if (filledCellsLegend.includes(index)) {
+//     // то очистить её
+//     // element.style.backgroundImage = "none";
+//     element.style.backgroundColor = "white";
+//     // и удалить её индекс из массива индексов заполненных ячеек
+//     filledCellsLegend = filledCellsLegend.filter(function (cellIndex) {
+//       return cellIndex !== index;
+//     });
+//   } else {
+//     // если не заполнена
+//     // то заполнить
+//     // var imageUrl = "url(" + randomArrayItem(imgArray) + ")";
+//     element.style.backgroundColor = "black";
+//     // и добавить её индекс в массив индексов заполненных ячеек
+//     filledCellsLegend.push(index);
+//   }
+//   console.log(filledCellsLegend);
+// });
+// box_legend.appendChild(element);
+// }
 
-// ячейки 2-го бокса, легенда 1
-var cells_2 = document.querySelectorAll(".box-legend .item-legend");
+// // ячейки 2-го бокса, легенда 1
+// var cells_2 = document.querySelectorAll(".box-legend .item-legend");
 
-// бокс 2, легенда 1
-var cells_legend_1 = document.querySelectorAll(".box-17 .item_17");
-cells_2.forEach(function (cell, cellIndex) {
-  if (filledCellsLegend.includes(cellIndex)) {
-    var imageUrl_16 = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl_16;
-    // cell.style.backgroundColor = "black";
-  }
-});
+// // бокс 2, легенда 1
+// var cells_legend_1 = document.querySelectorAll(".box-17 .item_17");
+// cells_2.forEach(function (cell, cellIndex) {
+//   if (filledCellsLegend.includes(cellIndex)) {
+//     var imageUrl_16 = "url(tiles/tiles-01.png)";
+//     cell.style.backgroundImage = imageUrl_16;
+//     // cell.style.backgroundColor = "black";
+//   }
+// });
 
-// ячейки 2-го бокса, легенда 2
-var cells_3 = document.querySelectorAll(".box-legend .item-legend");
+// // ячейки 2-го бокса, легенда 2
+// var cells_3 = document.querySelectorAll(".box-legend .item-legend");
 
-// бокс 2, легенда 2
-var cells_legend_2 = document.querySelectorAll(".box-17 .item_17");
-cells_3.forEach(function (cell, cellIndex) {
-  if (filledCellsLegend.includes(cellIndex)) {
-    var imageUrl_16 = "url(tiles/tiles-01.png)";
-    cell.style.backgroundImage = imageUrl_16;
-    // cell.style.backgroundColor = "black";
-  }
-});
+// // бокс 2, легенда 2
+// var cells_legend_2 = document.querySelectorAll(".box-17 .item_17");
+// cells_3.forEach(function (cell, cellIndex) {
+//   if (filledCellsLegend.includes(cellIndex)) {
+//     var imageUrl_16 = "url(tiles/tiles-01.png)";
+//     cell.style.backgroundImage = imageUrl_16;
+//     // cell.style.backgroundColor = "black";
+//   }
+// });
 
 
 // var resetButton = document.querySelector(".reset-button");
